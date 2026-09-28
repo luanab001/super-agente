@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "system": "Super Agente",
+
+  "specialists": {
+
+    "programacao": {
+      "command": "/programacao",
+      "name": "Programador",
+      "category": "development",
+      "module": "development/ProgramacaoAgent.js",
+      "enabled": true,
+      "priority": 90,
+      "dependencies": [
+        "estrutura"
+      ]
+    },
+
+    "database": {
+      "command": "/database",
+      "name": "Especialista em Banco de Dados",
+      "category": "data",
+      "module": "data/DatabaseAgent.js",
+      "enabled": true,
+      "priority": 84,
+      "dependencies": [
+        "estrutura"
+      ]
+    },
+
+    "design": {
+      "command": "/design",
+      "name": "Designer",
+      "category": "design",
+      "module": "design/DesignAgent.js",
+      "enabled": true,
+      "priority": 80,
+      "dependencies": []
+    },
+
+    "debug": {
+      "command": "/debug",
+      "name": "Especialista em Debug",
+      "category": "quality",
+      "module": "quality/DebugAgent.js",
+      "enabled": true,
+      "priority": 60,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "ia": {
+      "command": "/ia",
+      "name": "Especialista em Inteligência Artificial",
+      "category": "ai",
+      "module": "ai/IAgent.js",
+      "enabled": true,
+      "priority": 50,
+      "dependencies": []
+    }
+
+  }
+}

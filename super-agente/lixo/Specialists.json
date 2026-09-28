@@ -1,0 +1,399 @@
+{
+  "version": "1.0.0",
+  "specialists": {
+    "inicializar": {
+      "command": "/inicializar",
+      "name": "Inicializador de Projetos",
+      "category": "core",
+      "description": "Inicializa novos projetos e configura o ambiente.",
+      "priority": 100,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "configurar": {
+      "command": "/configurar",
+      "name": "Configurador",
+      "category": "core",
+      "description": "Configura parâmetros, ambientes e dependências.",
+      "priority": 99,
+      "enabled": true,
+      "dependencies": [
+        "inicializar"
+      ]
+    },
+
+    "estrutura": {
+      "command": "/estrutura",
+      "name": "Especialista em Estrutura",
+      "category": "core",
+      "description": "Organiza diretórios, módulos e arquitetura de arquivos.",
+      "priority": 98,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "arquitetura": {
+      "command": "/arquitetura",
+      "name": "Arquiteto de Software",
+      "category": "development",
+      "description": "Define arquitetura, módulos, padrões e tecnologias.",
+      "priority": 95,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "programacao": {
+      "command": "/programacao",
+      "name": "Programador",
+      "category": "development",
+      "description": "Desenvolvimento de código e lógica de programação.",
+      "priority": 90,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "frontend": {
+      "command": "/frontend",
+      "name": "Especialista Frontend",
+      "category": "development",
+      "description": "Desenvolvimento de interfaces web.",
+      "priority": 88,
+      "enabled": true,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "backend": {
+      "command": "/backend",
+      "name": "Especialista Backend",
+      "category": "development",
+      "description": "Desenvolvimento da lógica de servidor.",
+      "priority": 87,
+      "enabled": true,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "mobile": {
+      "command": "/mobile",
+      "name": "Especialista Mobile",
+      "category": "development",
+      "description": "Desenvolvimento de aplicativos móveis.",
+      "priority": 86,
+      "enabled": true,
+      "dependencies": [
+        "frontend",
+        "backend"
+      ]
+    },
+
+    "api": {
+      "command": "/api",
+      "name": "Especialista em APIs",
+      "category": "development",
+      "description": "Criação, integração e documentação de APIs.",
+      "priority": 85,
+      "enabled": true,
+      "dependencies": [
+        "backend"
+      ]
+    },
+
+    "database": {
+      "command": "/database",
+      "name": "Especialista em Banco de Dados",
+      "category": "data",
+      "description": "Modelagem, estrutura e administração de bancos de dados.",
+      "priority": 84,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "sql": {
+      "command": "/sql",
+      "name": "Especialista SQL",
+      "category": "data",
+      "description": "Consultas, procedures, índices e otimização SQL.",
+      "priority": 83,
+      "enabled": true,
+      "dependencies": [
+        "database"
+      ]
+    },
+
+    "design": {
+      "command": "/design",
+      "name": "Designer",
+      "category": "design",
+      "description": "Design visual e identidade dos produtos.",
+      "priority": 80,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "ux_ui": {
+      "command": "/ux_ui",
+      "name": "Especialista UX/UI",
+      "category": "design",
+      "description": "Experiência do usuário e interfaces.",
+      "priority": 79,
+      "enabled": true,
+      "dependencies": [
+        "design"
+      ]
+    },
+
+    "imagem": {
+      "command": "/imagem",
+      "name": "Especialista em Imagem",
+      "category": "multimedia",
+      "description": "Criação, edição e tratamento de imagens.",
+      "priority": 70,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "video": {
+      "command": "/video",
+      "name": "Especialista em Vídeo",
+      "category": "multimedia",
+      "description": "Produção e edição de vídeos.",
+      "priority": 69,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "audio": {
+      "command": "/audio",
+      "name": "Especialista em Áudio",
+      "category": "multimedia",
+      "description": "Produção, edição e processamento de áudio.",
+      "priority": 68,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "efeitos": {
+      "command": "/efeitos",
+      "name": "Especialista em Efeitos",
+      "category": "multimedia",
+      "description": "Efeitos visuais, sonoros e animações.",
+      "priority": 67,
+      "enabled": true,
+      "dependencies": [
+        "imagem",
+        "audio"
+      ]
+    },
+
+    "animacao": {
+      "command": "/animacao",
+      "name": "Especialista em Animação",
+      "category": "multimedia",
+      "description": "Animações de interfaces e conteúdos.",
+      "priority": 66,
+      "enabled": true,
+      "dependencies": [
+        "design"
+      ]
+    },
+
+    "debug": {
+      "command": "/debug",
+      "name": "Especialista em Debug",
+      "category": "quality",
+      "description": "Identificação e correção de erros.",
+      "priority": 60,
+      "enabled": true,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "teste": {
+      "command": "/teste",
+      "name": "Especialista em Testes",
+      "category": "quality",
+      "description": "Testes unitários, integração e aceitação.",
+      "priority": 59,
+      "enabled": true,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "seguranca": {
+      "command": "/seguranca",
+      "name": "Especialista em Segurança",
+      "category": "quality",
+      "description": "Segurança de aplicações, APIs e dados.",
+      "priority": 58,
+      "enabled": true,
+      "dependencies": [
+        "backend",
+        "database"
+      ]
+    },
+
+    "performance": {
+      "command": "/performance",
+      "name": "Especialista em Performance",
+      "category": "quality",
+      "description": "Otimização de velocidade e consumo de recursos.",
+      "priority": 57,
+      "enabled": true,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "ia": {
+      "command": "/ia",
+      "name": "Especialista em Inteligência Artificial",
+      "category": "ai",
+      "description": "Integração e aplicação de inteligência artificial.",
+      "priority": 50,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "agentes": {
+      "command": "/agentes",
+      "name": "Especialista em Agentes",
+      "category": "ai",
+      "description": "Criação e orquestração de agentes de IA.",
+      "priority": 49,
+      "enabled": true,
+      "dependencies": [
+        "ia"
+      ]
+    },
+
+    "prompts": {
+      "command": "/prompts",
+      "name": "Especialista em Prompt Engineering",
+      "category": "ai",
+      "description": "Criação e otimização de prompts.",
+      "priority": 48,
+      "enabled": true,
+      "dependencies": [
+        "ia"
+      ]
+    },
+
+    "automacao": {
+      "command": "/automacao",
+      "name": "Especialista em Automação",
+      "category": "ai",
+      "description": "Automação de processos e workflows.",
+      "priority": 47,
+      "enabled": true,
+      "dependencies": [
+        "ia"
+      ]
+    },
+
+    "dados": {
+      "command": "/dados",
+      "name": "Especialista em Dados",
+      "category": "data",
+      "description": "Análise, tratamento e organização de dados.",
+      "priority": 45,
+      "enabled": true,
+      "dependencies": [
+        "database"
+      ]
+    },
+
+    "excel": {
+      "command": "/excel",
+      "name": "Especialista Excel",
+      "category": "data",
+      "description": "Planilhas, fórmulas, VBA e automações Excel.",
+      "priority": 44,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "powerbi": {
+      "command": "/powerbi",
+      "name": "Especialista Power BI",
+      "category": "data",
+      "description": "Dashboards, modelos e análises Power BI.",
+      "priority": 43,
+      "enabled": true,
+      "dependencies": [
+        "dados"
+      ]
+    },
+
+    "saas": {
+      "command": "/saas",
+      "name": "Especialista SaaS",
+      "category": "business",
+      "description": "Arquitetura e estratégia de produtos SaaS.",
+      "priority": 40,
+      "enabled": true,
+      "dependencies": [
+        "arquitetura"
+      ]
+    },
+
+    "produto": {
+      "command": "/produto",
+      "name": "Especialista em Produto",
+      "category": "business",
+      "description": "Planejamento e evolução de produtos digitais.",
+      "priority": 39,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "marketing": {
+      "command": "/marketing",
+      "name": "Especialista em Marketing",
+      "category": "business",
+      "description": "Estratégia de marketing e aquisição.",
+      "priority": 38,
+      "enabled": true,
+      "dependencies": [
+        "produto"
+      ]
+    },
+
+    "vendas": {
+      "command": "/vendas",
+      "name": "Especialista em Vendas",
+      "category": "business",
+      "description": "Estratégias comerciais e conversão.",
+      "priority": 37,
+      "enabled": true,
+      "dependencies": [
+        "produto"
+      ]
+    },
+
+    "financeiro": {
+      "command": "/financeiro",
+      "name": "Especialista Financeiro",
+      "category": "business",
+      "description": "Gestão financeira e modelos de receita.",
+      "priority": 36,
+      "enabled": true,
+      "dependencies": []
+    },
+
+    "documentacao": {
+      "command": "/documentacao",
+      "name": "Especialista em Documentação",
+      "category": "core",
+      "description": "Documentação técnica e funcional.",
+      "priority": 30,
+      "enabled": true,
+      "dependencies": []
+    }
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "version": "3.0.0",
+  "system": "Super Agente",
+
+  "specialists": {
+
+    "programacao": {
+      "command": "/programacao",
+      "name": "Programador",
+      "category": "development",
+      "module": "development/ProgramacaoAgent.js",
+      "enabled": true,
+      "priority": 90,
+      "dependencies": []
+    },
+
+    "database": {
+      "command": "/database",
+      "name": "Especialista em Banco de Dados",
+      "category": "data",
+      "module": "data/DatabaseAgent.js",
+      "enabled": true,
+      "priority": 84,
+      "dependencies": []
+    },
+
+    "design": {
+      "command": "/design",
+      "name": "Designer",
+      "category": "design",
+      "module": "design/DesignAgent.js",
+      "enabled": true,
+      "priority": 80,
+      "dependencies": []
+    },
+
+    "debug": {
+      "command": "/debug",
+      "name": "Especialista em Debug",
+      "category": "quality",
+      "module": "quality/DebugAgent.js",
+      "enabled": true,
+      "priority": 60,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "ia": {
+      "command": "/ia",
+      "name": "Especialista em Inteligência Artificial",
+      "category": "ai",
+      "module": "ai/IAgent.js",
+      "enabled": true,
+      "priority": 50,
+      "dependencies": []
+    },
+
+    "estrutura": {
+      "command": "/estrutura",
+      "name": "Especialista em Estrutura de Sistemas",
+      "category": "architecture",
+      "module": "estrutura/EstruturaAgent.js",
+      "enabled": true,
+      "priority": 88,
+      "dependencies": []
+    },
+
+    "frontend": {
+      "command": "/frontend",
+      "name": "Especialista em Frontend",
+      "category": "development",
+      "module": "frontend/FrontendAgent.js",
+      "enabled": true,
+      "priority": 82,
+      "dependencies": [
+        "estrutura"
+      ]
+    },
+
+    "backend": {
+      "command": "/backend",
+      "name": "Especialista em Backend",
+      "category": "development",
+      "module": "backend/BackendAgent.js",
+      "enabled": true,
+      "priority": 83,
+      "dependencies": [
+        "programacao",
+        "estrutura"
+      ]
+    },
+
+    "api": {
+      "command": "/api",
+      "name": "Especialista em APIs",
+      "category": "development",
+      "module": "api/ApiAgent.js",
+      "enabled": true,
+      "priority": 81,
+      "dependencies": [
+        "backend"
+      ]
+    },
+
+    "sql": {
+      "command": "/sql",
+      "name": "Especialista em SQL",
+      "category": "data",
+      "module": "sql/SqlAgent.js",
+      "enabled": true,
+      "priority": 82,
+      "dependencies": [
+        "database"
+      ]
+    },
+
+    "ux_ui": {
+      "command": "/ux_ui",
+      "name": "Especialista em UX/UI",
+      "category": "design",
+      "module": "ux_ui/UxUiAgent.js",
+      "enabled": true,
+      "priority": 78,
+      "dependencies": [
+        "design"
+      ]
+    },
+
+    "mobile": {
+      "command": "/mobile",
+      "name": "Especialista em Desenvolvimento Mobile",
+      "category": "development",
+      "module": "mobile/MobileAgent.js",
+      "enabled": true,
+      "priority": 77,
+      "dependencies": [
+        "programacao",
+        "frontend"
+      ]
+    },
+
+    "seguranca": {
+      "command": "/seguranca",
+      "name": "Especialista em Segurança",
+      "category": "security",
+      "module": "seguranca/SegurancaAgent.js",
+      "enabled": true,
+      "priority": 79,
+      "dependencies": [
+        "backend",
+        "database"
+      ]
+    },
+
+    "testes": {
+      "command": "/testes",
+      "name": "Especialista em Testes",
+      "category": "quality",
+      "module": "testes/TestesAgent.js",
+      "enabled": true,
+      "priority": 70,
+      "dependencies": [
+        "programacao"
+      ]
+    },
+
+    "performance": {
+      "command": "/performance",
+      "name": "Especialista em Performance",
+      "category": "quality",
+      "module": "performance/PerformanceAgent.js",
+      "enabled": true,
+      "priority": 72,
+      "dependencies": [
+        "backend",
+        "database"
+      ]
+    }
+
+  }
+}
